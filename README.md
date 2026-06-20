@@ -373,6 +373,4 @@ pytest -v
 
 ---
 
-## License
 
-MIT
