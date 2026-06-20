@@ -32,6 +32,11 @@ python run_eval.py --mode random
 
 # 7. (Optional) Run with an LLM via OpenRouter
 python run_eval.py --mode llm --api-key YOUR_OPENROUTER_KEY
+
+# 8. (Optional) Run inside Docker
+docker build -t mobile-ui-env .
+docker run --rm mobile-ui-env                                    # heuristic eval
+docker run --rm mobile-ui-env python run_eval.py --mode random   # random agent
 ```
 
 ---
@@ -370,6 +375,7 @@ pytest -v
 - ✅ **Failure analysis** printed after any failed run
 - ✅ **Observation text** for each screen (accessibility-tree style)
 - ✅ **`min_steps` per task** for meaningful efficiency reward
+- ✅ **Dockerfile** for containerized evaluation
 
 ---
 
